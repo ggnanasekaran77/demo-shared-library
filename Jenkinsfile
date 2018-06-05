@@ -10,7 +10,7 @@ pipeline {
                  		@library ('my-shared-library@master')
                 		log.info 'Starting'
                  		log.warning 'Nothing to do!'
-                 		build
+                 		build 'Hello World'
 
             	 }
             }
