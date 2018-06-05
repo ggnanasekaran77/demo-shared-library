@@ -1,12 +1,11 @@
 #!/usr/bin/groovy
 
-@Library('my-shared-library')
-
 pipeline {
     agent none
     stage ('Example') {
         steps {
              script {
+                 @Library('my-shared-library')
                  log.info 'Starting'
                  log.warning 'Nothing to do!'
              }
