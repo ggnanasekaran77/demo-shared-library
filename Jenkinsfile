@@ -5,7 +5,7 @@ pipeline {
     stage ('Example') {
         steps {
              script {
-                 @Library('my-shared-library')
+                 library 'my-shared-library@master'
                  log.info 'Starting'
                  log.warning 'Nothing to do!'
              }
