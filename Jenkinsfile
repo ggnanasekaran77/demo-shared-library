@@ -7,9 +7,11 @@ pipeline {
         stage('Building Docker Image') {
             steps {
              	script {
-                 		library 'my-shared-library@master'
-                		 log.info 'Starting'
+                 		@library ('my-shared-library@master')
+                		log.info 'Starting'
                  		log.warning 'Nothing to do!'
+                 		build
+
             	 }
             }
         }
