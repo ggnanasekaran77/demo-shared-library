@@ -1,0 +1,30 @@
+@Library('libcore@master') _
+pipeline {
+    agent none
+    stages{
+    	stage ('Example') {
+        	steps {
+            // log.info 'Starting'
+            	script {
+            		hello()
+                	log.info "Starting"
+                	log.warn 'Nothing to do!'
+            	}
+        	}
+    	}
+    }
+}
+
+/*
+Hello World gnanam
+[Pipeline] echo
+INFO: Starting
+[Pipeline] echo
+WARNING: Nothing to do!
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+*/
