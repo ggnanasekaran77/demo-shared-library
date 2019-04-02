@@ -11,5 +11,19 @@ pipeline {
             	 }
             }
         }
+        stage ('App Build And Publish'){
+            steps {
+                script {
+                appBuildPush()
+                }
+            }
+        }
+        stage ('DOC Build And Push'){
+            steps {
+                script {
+                    dockerBuildPush()
+                }
+            }
+        }
     }
 }
