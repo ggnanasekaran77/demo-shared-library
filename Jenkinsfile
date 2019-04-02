@@ -1,17 +1,13 @@
 #!/usr/bin/env groovy
-
+@Library('libcore@master') _
 pipeline {
     agent any
 
     stages {
-        stage('Building Docker Image') {
+        stage('gitCheckout') {
             steps {
              	script {
-                 		library 'my-shared-library@master'
-                		log.info 'Starting'
-                 		log.warning 'Nothing to do!'
-                 		build 'Hello World'
-
+             	gitCheckout()
             	 }
             }
         }
