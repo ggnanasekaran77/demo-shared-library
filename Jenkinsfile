@@ -22,6 +22,7 @@ pipeline {
             steps {
                 script {
                     dockerBuildPush()
+                    sh "find ./"
                 }
             }
         }
